@@ -1,0 +1,28 @@
+<div class="add_post">
+  <div class="home_post">
+    Home
+  </div>
+
+  <div class="create_post">
+    <textarea placeholder="What is happening?" [(ngModel)]="text_post"></textarea>
+  </div>
+
+  <div class="translate">
+    <button (click)="postTheText()">
+      Tweet
+    </button>
+  </div>
+
+  <div class="posts" *ngFor="let post of posts">
+    <div *ngIf="post.length > 0">
+      <div class="post_seen">
+        {{post}}
+      </div>
+      <div class="actions">
+        <img src="https://cdn2.iconfinder.com/data/icons/instagram-17/32/9-verifiy-1024.png" width="18px" height="18px">
+        <img src="https://gas-kvas.com/uploads/posts/2023-01/1674626522_gas-kvas-com-p-serdtse-konturnii-risunok-1.png" width="18px" height="18px"*ngIf="like==false" (click)="do_like()">
+        <img src="https://i.pinimg.com/originals/df/4f/69/df4f6974ff92a799634babded2355527.png" width="18px" height="18px" *ngIf="like==true" (click)="do_like()">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+.header{
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid gray;
+  width: 250px;
+  height: 100vh;
+
+  & h2{
+    margin-left: auto;
+    margin-right: auto;
+    color: deepskyblue;
+
+    &:hover{
+      opacity: 0.85;
+      cursor: pointer;
+    }
+  }
+}
+
